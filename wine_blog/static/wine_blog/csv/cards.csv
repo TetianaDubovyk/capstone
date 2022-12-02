@@ -1,0 +1,16 @@
+id,grapes_list,winery_name,special_grapes,type,price,year,description,image_url,post_created_date,continent,country_id,rating_id_id,video_url
+1,Riesling,Henry Weber,,White Dry,10,2019,Just a good Riesling!,\static\wine_blog\media\for_cards\riesling_img.jpg,2022-11-18,Europe,60,1,\static\wine_blog\media\for_cards\riesling.mp4
+2,,Sensi,Sangiovese,Red Dry,9,2018,Great Sangiovese! Sangiovese is always a good choice.,\static\wine_blog\media\for_cards\sangiovese_toscana_img.jpg,2022-11-18,Europe,82,2,\static\wine_blog\media\for_cards\sangiovese.mp4
+3,Malbec,Callia,,Red Dry,7,2020,A great full-body Malbec!,\static\wine_blog\media\for_cards\callia_img.png,2022-11-18,South America,8,3,\static\wine_blog\media\for_cards\callia_malbec.mp4
+4,,Jean de la Roche,Sauvignon,Red Dry,6,2020,"Great Sauvignon! Blanc is redundant, just Sauvignon is the best!",\static\wine_blog\media\for_cards\sauvignon_img.jpg,2022-11-18,Europe,60,4,\static\wine_blog\media\for_cards\sauvignon.mp4
+5,,Il Proprio,Sangiovese,Red Dry,9,2016,Feels like Cabernet Sauvignon...,\static\wine_blog\media\for_cards\sangiovese_img.jpg,2022-11-18,Europe,82,5,\static\wine_blog\media\for_cards\sangiovese_toscana.mp4
+6,Sauvignon Blanc,Marlborough Sun,,White Dry,12,2020,The pure Marlborough Sun Sauvignon Blanc,\static\wine_blog\media\for_cards\marlboro.jpg,2022-11-18,Oceania,120,6,\static\wine_blog\media\for_cards\marlboro.mp4
+7,,Plantaze,Krstac,White Dry,8,2019,Worth trying!,\static\wine_blog\media\for_cards\krstac_img.png,2022-11-18,Europe,112,7,\static\wine_blog\media\for_cards\krstac.mp4
+8,Chardonnay,Jacob's Creek,Pinot Noir,Sparkling,13,2020,Good sparkling white brut,\static\wine_blog\media\for_cards\jacobscreek.jpg,2022-11-18,Oceania,11,8,\static\wine_blog\media\for_cards\jacobs.mp4
+9,Grenache,Cotes du Rhone Village Plan de Dieu,"Syrah, Mourvedre",Red Dry,10,2019,"Red wine with smoking flavor, good one!",\static\wine_blog\media\for_cards\france.jpg,2022-11-18,Europe,60,9,\static\wine_blog\media\for_cards\france_v.mp4
+10,,Purcari,Viorica,White Dry,7,2020,It will bring spring to your winter!,\static\wine_blog\media\for_cards\viorica_img.png,2022-11-18,Europe,109,10,\static\wine_blog\media\for_cards\viorica.mp4
+11,,Freixenet,Macabeo,Sparkling,13,2020,Feels like a slightly sweetened soda water,\static\wine_blog\media\for_cards\nevada.png,2022-11-18,Europe,157,12,\static\wine_blog\media\for_cards\nevada_v.mp4
+12,,Corte Dei Rovi,Prosecco,Sparkling,15,2021,Good prosecco to drink it neat or in cocktails,\static\wine_blog\media\for_cards\prosecco.png,2022-11-18,Europe,82,13,\static\wine_blog\media\for_cards\prosecco_1.mp4
+13,Chardonnay,Mallol-Gantois,Champagne Grand Cru,Sparkling,30,2019,Ideal for a New Year's Eve!,\static\wine_blog\media\for_cards\champagne.png,2022-11-19,Europe,60,14,\static\wine_blog\media\for_cards\champagne.mp4
+14,Chardonnay,Francois Montand,,Sparkling,11,2021,Tastes like artificially flavored and artificially carbonated.,\static\wine_blog\media\for_cards\brut.png,2022-11-19,Europe,60,15,\static\wine_blog\media\for_cards\brut.mp4
+15,,Plantaze,Vranac,Rose,7,2019,Strong taste of redcurrant berries and sweet briar fruits,\static\wine_blog\media\for_cards\rose.jpg,2022-11-25,Europe,112,16,\static\wine_blog\media\for_cards\rose.mp4

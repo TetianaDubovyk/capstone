@@ -1,0 +1,184 @@
+code,country,continent
+af,Afghanistan,Asia
+al,Albania,Europe
+dz,Algeria,Africa
+as,American Samoa,Oceania
+ad,Andorra,Europe
+ao,Angola,Africa
+ag,Antigua and Barbuda,North America
+ar,Argentina,South America
+am,Armenia,Asia
+aw,Aruba,South America
+au,Australia,Oceania
+at,Austria,Europe
+az,Azerbaijan,Asia
+bs,Bahamas,North America
+bh,Bahrain,Asia
+bd,Bangladesh,Asia
+bb,Barbados,North America
+by,Belarus,Europe
+be,Belgium,Europe
+bz,Belize,North America
+bj,Benin,Africa
+bm,Bermuda,North America
+bt,Bhutan,Asia
+ba,Bosnia and Herzegovina,Europe
+bw,Botswana,Africa
+br,Brazil,South America
+bg,Bulgaria,Europe
+bf,Burkina Faso,Africa
+bi,Burundi,Africa
+kh,Cambodia,Asia
+cm,Cameroon,Africa
+ca,Canada,North America
+ky,Cayman Islands,North America
+cf,Central African Republic,Africa
+td,Chad,Africa
+cl,Chile,South America
+cn,China,Asia
+co,Colombia,South America
+km,Comoros,Africa
+ck,Cook Islands,Oceania
+cr,Costa Rica,North America
+hr,Croatia,Europe
+cu,Cuba,North America
+cy,Cyprus,Asia
+cz,Czechia,Europe
+dk,Denmark,Europe
+dj,Djibouti,Africa
+dm,Dominica,North America
+do,Dominican Republic,North America
+ec,Ecuador,South America
+eg,Egypt,Africa
+sv,El Salvador,North America
+gq,Equatorial Guinea,Africa
+er,Eritrea,Africa
+ee,Estonia,Europe
+sz,Eswatini,Africa
+et,Ethiopia,Africa
+fj,Fiji,Oceania
+fi,Finland,Europe
+fr,France,Europe
+ga,Gabon,Africa
+ge,Georgia,Asia
+de,Germany,Europe
+gh,Ghana,Africa
+gr,Greece,Europe
+gd,Grenada,North America
+gu,Guam,Oceania
+gt,Guatemala,North America
+gn,Guinea,Africa
+gw,Guinea-Bissau,Africa
+gy,Guyana,South America
+ht,Haiti,North America
+hn,Honduras,North America
+hk,Hong Kong,Asia
+hu,Hungary,Europe
+is,Iceland,Europe
+in,India,Asia
+id,Indonesia,Asia
+iq,Iraq,Asia
+ie,Ireland,Europe
+il,Israel,Asia
+it,Italy,Europe
+jm,Jamaica,North America
+jp,Japan,Asia
+jo,Jordan,Asia
+kz,Kazakhstan,Asia
+ke,Kenya,Africa
+ki,Kiribati,Oceania
+kw,Kuwait,Asia
+kg,Kyrgyzstan,Asia
+lv,Latvia,Europe
+lb,Lebanon,Asia
+ls,Lesotho,Africa
+lr,Liberia,Africa
+ly,Libya,Africa
+li,Liechtenstein,Europe
+lt,Lithuania,Europe
+lu,Luxembourg,Europe
+mg,Madagascar,Africa
+mw,Malawi,Africa
+my,Malaysia,Asia
+mv,Maldives,Asia
+ml,Mali,Africa
+mt,Malta,Europe
+mh,Marshall Islands,Oceania
+mr,Mauritania,Africa
+mu,Mauritius,Africa
+mx,Mexico,North America
+md,Moldova,Europe
+mc,Monaco,Europe
+mn,Mongolia,Asia
+me,Montenegro,Europe
+ma,Morocco,Africa
+mz,Mozambique,Africa
+mm,Myanmar,Asia
+na,Namibia,Africa
+nr,Nauru,Oceania
+np,Nepal,Asia
+nl,Netherlands,Europe
+nz,New Zealand,Oceania
+ni,Nicaragua,North America
+ne,Niger,Africa
+ng,Nigeria,Africa
+mk,North Macedonia,Europe
+no,Norway,Europe
+om,Oman,Asia
+pk,Pakistan,Asia
+pw,Palau,Oceania
+pa,Panama,North America
+pg,Papua New Guinea,Oceania
+py,Paraguay,South America
+pe,Peru,South America
+ph,Philippines,Asia
+pl,Poland,Europe
+pt,Portugal,Europe
+pr,Puerto Rico,North America
+qa,Qatar,Asia
+ro,Romania,Europe
+rw,Rwanda,Africa
+kn,Saint Kitts and Nevis,North America
+lc,Saint Lucia,North America
+vc,Saint Vincent and the Grenadines,North America
+ws,Samoa,Oceania
+sm,San Marino,Europe
+sa,Saudi Arabia,Asia
+sn,Senegal,Africa
+rs,Serbia,Europe
+sc,Seychelles,Africa
+sl,Sierra Leone,Africa
+sg,Singapore,Asia
+sk,Slovakia,Europe
+si,Slovenia,Europe
+sb,Solomon Islands,Oceania
+so,Somalia,Africa
+za,South Africa,Africa
+ss,South Sudan,Africa
+es,Spain,Europe
+lk,Sri Lanka,Asia
+sd,Sudan,Africa
+sr,Suriname,South America
+se,Sweden,Europe
+ch,Switzerland,Europe
+tj,Tajikistan,Asia
+th,Thailand,Asia
+tg,Togo,Africa
+to,Tonga,Oceania
+tt,Trinidad and Tobago,North America
+tn,Tunisia,Africa
+tm,Turkmenistan,Asia
+tv,Tuvalu,Oceania
+ug,Uganda,Africa
+ua,Ukraine,Europe
+ae,United Arab Emirates,Asia
+gb,United Kingdom of Great Britain and Northern Ireland,Europe
+us,United States of America,North America
+uy,Uruguay,South America
+uz,Uzbekistan,Asia
+vu,Vanuatu,Oceania
+ve,Venezuela,South America
+vn,Viet Nam,Asia
+ye,Yemen,Asia
+zm,Zambia,Africa
+zw,Zimbabwe,Africa

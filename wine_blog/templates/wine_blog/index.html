@@ -1,0 +1,238 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- METAS -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Wine Blog
+            {% block title %}
+            {% endblock %}
+        </title>
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" sizes="32x32" href="static/wine_blog/media/favicon-32x32.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/e2449c9314.js" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/7739bc757f.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="{% static 'wine_blog/css/styles.css' %}">
+    </head>
+    <body>
+      {% block body %}
+        <!-- NAVBAR -->
+        <div id="up"></div>
+        <nav class="navbar bg-light navbar-light" style="position: relative;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="static/wine_blog/media/LogoNavBar.png" alt="LogoNavBar" style="width:120px;" class="rounded-pill">
+            </a>
+            <input type="checkbox" id="ham-menu">
+            <label for="ham-menu">
+              <div>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+              </div>
+            </label>
+            <div class="full-page-green"></div>
+            <div class="ham-menu">
+              <div>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                  <img src="static/wine_blog/media/LogoNavBar.png" alt="LogoNavBar" style="width:120px;" class="rounded-pill">
+                </a>
+              </div>
+              <ul id="menu">
+                <div class="container" style="text-align:center"><i class="fa-solid fa-dice fa-2x" style="color: mediumseagreen;"></i></div>
+                <li>Random wine</li>
+                <hr>
+                <li style="color: #F71450;">Red</li>
+                <li>White</li>
+                <li>Rose</li>
+                <li>Sparkling</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- SINGLE WINE BLOCK -->
+        <div id="single_wine">
+          <section id="static_image" class="section sttc_img"></section>
+          <dic class="container" style="text-align: center;">
+            <div class="container" id="country_flag" style="text-align: center;">
+              <span id="flag"></span>
+            </div>
+            <p id="wine_region" style="color: #666666; font-size: 18px; text-transform: uppercase; font-weight: 500; margin:0 0 0 0;"></p>
+            <p id="created_date" style="color: #999999; font-weight: 500; font-size: 15px; padding-bottom: 15px;"></p>
+            <div style="text-align: center;">
+              <img id="grapes_img" src="" style="display: inline-block; margin-top: -30px;">
+              <h1 id="wine_grapes" style="text-align: center; margin-top: 14px; display: inline-block; font-size: 45px; font-weight: 500; font-style: italic; color: #404040"></h1>
+            </div>
+            <p id="wine_type"></p>
+            <p id="wine_price"><i class="fa-solid "></i></p>
+            <p style="font-size: 22px; font-style: italic; font-weight: 400; padding: 40px 20px 10px 20px;">
+              <q id="wine_description"></q>
+            </p>
+            <div class="container" id="wine_media" style="padding: 20px;"></div>
+            <div class="container" id="chart_logo" style="padding-top:50px; ">
+              <img src="/static/wine_blog/media/personal_chart.png" alt="Chart Logo" style="width:280px;">
+            </div>
+            <div class="container" id="wine_chart" style="padding-top:5px; padding-bottom: 30px;">
+              <div class="row">
+                <div class="container" id="icons_chart">
+                </div>
+              </div>
+            </div>
+            <p id="recommend" style="font-size:24px; padding-top:25px;"></p>
+            <!-- CAROUSEL -->
+            <div class="container" id="more_wine">
+              <div class="container" style="padding-top:105px;">
+                <p><img id="decorative_line" src="/static/wine_blog/media/decorative_line_green.png" alt="decorative_line" style="max-width:755px;"></p>
+              </div>
+              <p id="associated_header" style="padding-top:5px; font-size: 22px;">ASSOCIATED WINES</p>
+              <div id="wine_carousel">
+                <!-- CAROUSEL ITEMS -->
+                <div class="row" id="new_carousel" ></div>
+              </div>
+              <div class="container">
+                <img id="decorative_line" src="/static/wine_blog/media/decorative_line_green.png" alt="decorative_line" style="max-width:755px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="top">
+          <!-- CONTENT HEADER -->
+          <div class="upper-body">
+            <div class="upper-body-text">
+              <div class="container" style="padding:15px;">
+                <img src="/static/wine_blog/media/wine-blog.png" alt="Logo" style="width:210px;" class="rounded-pill">
+              </div>
+              <h3 style="font-size: 30px; padding:30px; color: #262626;">Read the story of my latest explorations!</h3>
+              <div class="container-for-buttons">
+                <div class="colu">
+                  <lable id="cont">CONTINENTS </lable>
+                  <select class="form-select" id="continents" aria-label="select-continents">
+                    {% if selected_continent %}
+                      <option id="selected-continent" selected style="text-align: center;">{{ selected_continent }}</option>
+                    {% endif %}
+                    <option style="text-align: center;">All</option>
+                    {% for continent in continents %}
+                        <option value="{{ continent }}" style="text-align: center;">{{ continent }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+                <div class="colu">
+                  <lable id="countr">COUNTRIES </lable>
+                  <select class="form-select" id="countries" aria-label="select-countries">
+                    {% if selected_country %}
+                      <option id="selected-country" selected style="text-align: center;">{{ selected_country }}</option>
+                    {% endif %}
+                    <option style="text-align: center;">All</option>
+                    {% for country in countries %}
+                        <option value="{{ country }}" style="text-align: center;">{{ country }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CONTENT BODY -->
+          <div class="container" id="menu-filter_image">
+            {% if img_for_menu_item %}
+            <img src="{{ img_for_menu_item }}" alt="menu-filter_image" style="width:190px;">
+            {% endif %}
+          </div>
+          <div id="message" style="font-size: 25px;">{{ message }}</div>
+          <div class="container-for-cards">
+            <div class="row" style="justify-content: center;">
+              {% for wine_card in wine_cards %}
+                <div class="column">
+                  <div class="card h-100">
+                    {% if wine_card.image_url %}
+                    <div style="width:420px; height: 235px;">
+                      <img src={{ wine_card.image_url }} class="media-object" style="width:100%; height: 100%; object-fit: cover">
+                    </div>
+                    {% else %}
+                      <img src="/static/wine_blog/media/wineglass.png" class="media-object" style="width:420px; height: 235px;">
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title" style="color: #595959; font-size: 15px; text-transform: uppercase; height: 9px;">
+                        <i class="fa-solid fa-map-location-dot"></i> {{ wine_card.continent }}/{{ wine_card.country }}
+                      </h5>
+                      <div class="postcard-subtitle-small">
+                        <p style="color: #999999; font-weight: 500; font-size: 15px;">Published on {{ wine_card.post_created_date }}</p>
+                      </div>
+                      {% if wine_card.grapes_list and wine_card.special_grapes %}
+                      <p class="card-text">{{ wine_card.grapes_list }}, {{ wine_card.special_grapes }}</p>
+                      {% elif wine_card.grapes_list %}
+                        <p class="card-text">{{ wine_card.grapes_list }}</p>
+                      {% elif wine_card.special_grapes %}
+                        <p class="card-text">{{ wine_card.special_grapes }}</p>
+                      {% endif %}
+                    </div>
+                    <p id="card-id" style="display:none;">{{ wine_card.id }}</p>
+                    <a class="stretched-link"></a>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+          <!-- PAGINATION -->
+          <div class="container">
+            <div style="padding-top:80px;" class="pagination">
+              <span class="step-links">
+                <!-- When one navigates through pages, pagination is keeping the existing parameters in the current URL -->
+                {% if wine_cards.has_previous %}
+                  <a href="?page={{ wine_cards.previous_page_number }}
+                  {% if selected_type %}&wine_type={{ selected_type }}{% endif %}
+                  {% if selected_continent %}&continent={{ selected_continent }}{% endif %}
+                  {% if selected_country %}&country={{ selected_country }}{% endif %}" class="btn btn-success">Previous</a>
+                {% endif %}
+                <span class="current" style="padding:7px;">
+                    Page {{ wine_cards.number }} of {{ wine_cards.paginator.num_pages }} 
+                </span>
+                {% if wine_cards.has_next %}
+                  <a href="?page={{ wine_cards.next_page_number }}
+                  {% if selected_type %}&wine_type={{ selected_type }}{% endif %}
+                  {% if selected_continent %}&continent={{ selected_continent }}{% endif %}
+                  {% if selected_country %}&country={{ selected_country }}{% endif %}" class="btn btn-success">Next</a>
+                {% endif %}
+              </span>
+            </div>
+          </div>
+        </div>
+          <!-- FOOTER -->
+          <div class="container" style="text-align: center; padding-top: 150px;">
+            <a href="#up">
+              <i style="font-size: 45px; color: MediumSeaGreen;" class="bi bi-arrow-up"></i>
+            </a>
+          </div>
+          <div class="container" style="height: 100px; margin-top:20px;">
+            <a class="navbar-brand" href="{% url 'index' %}">
+              <img class="center" src="/static/wine_blog/media/wine-blog.png"  alt="Logo">
+            </a>
+          </div>
+          <div class="footer" style="background-color: MediumSeaGreen; padding-top: 100px; text-align: center">
+            <footer>
+                <div >
+                  <span style="font-family: Georgia, serif; font-size: 25px; color: white; margin: 8px;">Follow me on social media:</span>
+                </div>
+                <!-- Section: Social media -->
+                <div class="container">
+                  <a href="https://www.instagram.com/ubiestveritas/" class="me-4 link-secondary">
+                    <i class="fa-inverse fa-brands fa-instagram fa-2x"></i>
+                  </a>
+                  <p style="font-size: 11px; color: darkgreen; margin-top: 55px;">ALCOHOL ABUSE IS DANGEROUS FOR HEALTH, CONSUME WITH MODERATION.<br>
+                    <a href="https://www.flaticon.com/free-icons/fruit" title="fruit icons">Fruit icons created by Darius Dan - Flaticon</a></p>
+                  <hr>
+                </div>
+            </footer>
+          </div>
+      {% endblock %}
+    </body>
+    {% block script %}
+      <script src="{% static 'wine_blog/js/wine_blog.js' %}"></script>
+    {% endblock %}
+</html>
