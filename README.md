@@ -1,5 +1,5 @@
-# This wine blog 
-Is a single page application
+# This is a wine blog 
+It is a single page application, which one can use as a tamplate for a blog about wine
 #### Video Demo:  <URL HERE>
 ## Table of Contents
 
@@ -11,16 +11,23 @@ Is a single page application
 
 ## Distinctiveness and Complexity
 
-My project satisfies the distinctiveness and complexity requirements because we havent created this kind of application before in this course.
-It is an online journal (diary website) that offers regularly updated content about wine.
-It presents information in reverse chronological order and it’s written in an informal style. 
-User can scroll through the site or use the menu items to choose the kind of wine one wants to read about. 
-Also user can choose a filter to navigate throgh the site by selecting a region of the wine on the main page.
-Clicking on the image card opens the page of a particular wine and it shows picture of the wine bottle, representing video and personal opinion of the owner of the blog about this wine.
+The wine blog is an online journal (diary website) that offers regularly updated content about wine.
+It presents information in reverse chronological order and it is written in an informal style.
 
-To add a new wine to the site one should use Django default admin interface:
+After site is loaded, user can see the menu bar, filter form, wine cards and a footer.
+Navigation buttons at the end of a page appear when site have more then 6 wines to show.
 
- ```
+Users can use the menu bar, which is available at all pages, to choose the kind of a wine they want to read about: red, white, sparkling, rose or choose a random wine option.
+By selecting a country and/or continent on the form at the main page users can filter which wines are currently showing.
+If user select France for exemple, continent automaticly will change to Europe.
+
+Click on a wine card opens the page (with JavaScript used to control the user interface) of a particular wine and it shows information about wine, a picture of the wine bottle, a representing video, a short personal comment and a personal chart(by icons) from the owner. If there is more wines of this region in the database, associated wines will appear in the corresponding block. If the are more then 3 of them, they will be hided away by an animated chevron.
+
+## How to use it
+To add a new wine to the site one should use Django default admin interface.
+After loggin in, a site administrator can create, edit, and delete objects stored in the database.
+
+```
  python manage.py createsuperuser
 ```
 
@@ -28,19 +35,3 @@ The project have 3 models:
 * Regions_and_flags
 * Personal_rating
 * Wine_card
-
-After loggin in, you can create, edit, and delete objects stored in the database.
-
-All 
-
-
-
-
-
-
-## How to use it
-The script requires the following parameters to be launched: 
-
- ```
- python text_file_compressor.py decompress FILE.bin FILE.txt
-```
