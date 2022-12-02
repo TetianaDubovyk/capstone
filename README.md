@@ -14,7 +14,8 @@ It is a single page application, which one can use as a tamplate for a blog abou
     * [Additional commands](#additional-commands)
 * [How to run the application](#how-to-run-the-application)
 * [Any other additional information the staff should know about your project.](#about-the-algorithm)
-* [If you’ve added any Python packages that need to be installed in order to run your web application, be sure to add them to a requirements.txt file!](#design-of-the-project)
+* [If you’ve added any Python packages -- a requirements.txt file!](#design-of-the-project) 
+tqdm???
 
 ## Distinctiveness and Complexity
 
@@ -31,7 +32,11 @@ If user select France for exemple, continent automaticly will change for Europe.
 Click on a wine card opens the page (with JavaScript used to control the user interface) of a particular wine and it shows information about wine, a picture of the wine bottle, a representing video, a short personal comment and a personal chart(by icons) from the owner.If there is more wines of this region in the database, associated wines will appear in the corresponding block. If the are more then 3 of them, they will be hided away by an animated chevron.
 
 ## What’s contained in each file
-
+ ### views.py
+ In the views.py file almoust all functions renders the mail/inbox.html template.
+ single_wine_content function - 
+ associated_wines - , 
+ get_countries_names - 
 
 
 ## How to run the application

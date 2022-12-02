@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse
 from django.http import HttpResponse
-from django.http import HttpResponseRedirect
 from django.core import serializers
 from django.shortcuts import render
 from itertools import chain
@@ -174,11 +172,9 @@ def associated_wines(request):
 
 
 def get_countries_names(ids):
-    
     names = []
     
     for i in ids:
         name = Regions_and_flags.objects.get(id = i)
         names.append(name)
-
     return(names)
