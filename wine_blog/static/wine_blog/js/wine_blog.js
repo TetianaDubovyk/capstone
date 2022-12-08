@@ -23,9 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.querySelectorAll('li');
     for (const item of menu) {
         item.addEventListener('click', function() {
-            let selected_type = item.innerHTML;
+            let selected_type = item.innerHTML; 
             console.log(selected_type);
-            // Fetch all info of the wine
             window.location.href = `http://127.0.0.1:8000/types?wine_type=${selected_type}`;
         })
     }
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(card);
             // Get id of a card
             let wine_id = card.querySelector('#card-id').innerHTML;
-            // Fetch all info of the wine
+            // Fetch all info of the choosen wine
             fetch(`http://127.0.0.1:8000/single_wine_content?wine_id=${wine_id}`)
             .then(response => response.json())
             .then(card_info => {

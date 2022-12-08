@@ -67,7 +67,7 @@ def open_cards(cards_path):
                 reader = csv.reader(file)
                 next(reader)
                 
-                # Insert data into the table
+                # Insert the data into the table
                 for row in reader:
                     card = Wine_card(grapes_list=row[1], 
                                     winery_name=row[2], 

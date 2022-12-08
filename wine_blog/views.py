@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 from django.core import serializers
 from django.shortcuts import render
@@ -30,7 +29,7 @@ def index(request):
     })
     
 
-# Filter continents
+# Filter continents 
 def continents(request):
     # Get selected continent
     selected_continent = request.GET.get("continent")
