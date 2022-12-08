@@ -6,13 +6,14 @@ It is a single page application, which one can use as a tamplate for a blog abou
 * [Distinctiveness and Complexity](#distinctiveness-and-complexity)
 * [Short describing](#short-describing-of-the-project)
 * [What’s contained in each file](#what’s-contained-in-each-file)
-    * [views.py]
-    * [models.py]
-    * [index.html]
-    * [wine_blog.js]
-    * [Csv files](#csv-files)
-    * [media](#media)
-    * [Additional commands](#additional-commands)
+    * [views.py](#views.py)
+    * [models.py](#models.py)
+    * [index.html](#index.html)
+    * [wine_blog.js](#wine_blog.js)
+    * [style.css](#style.css)
+    * [CSV folder](#csv-files)
+    * [Media folder](#media-folder)
+    * [fill_in_database.py](#fill_in_database.py)
 * [How to run the application](#how-to-run-the-application)
 * [Additional information](#additional-information)
 
@@ -41,24 +42,24 @@ Click on a wine card opens the page (with JavaScript used to control the user in
  - countries function: get selected country, renders the index page; continent field gets automatickly changed to corresponding continent, based on the choosen country
  - types function: renders the index.html with wine cards of a particular wine type which was choosen by the user from the menu items; if user choose a "random wine" item, it will render only one rendom wine card; message "no wines found" returns if there is no wines of choosen type
  - single_wine_content function: return JSON data from the server (in the body of an HTTP response) with the data from the all fields from 2 database tables (ratings and description) of a choosen wine; 
- - associated_wines function: gets the id of a current wine and retuns JSON data with assotiated wines, based on a country of the current wine
+ - associated_wines function: gets the id of a current wine (to exclude it from the result) and a country of the current wine, and retuns the JSON data with assotiated wines, filtered by country
  - get_countries_names function: helper function to get all currently available countries from a database (by their ids)
 
 ### models.py
-models.py file consists of 3 models: Regions_and_flags (model for countries), Personal_rating (model to store a rating of each wine based on wine scale traits), Wine_card (model to store the data of each wine) and 3 consatants: CONTINENTS, GRAPES (most popular grapes), TYPES_OF_WINE (red, dry, ets).
+The models.py file consists of 3 models: Regions_and_flags (model for countries), Personal_rating (model to store a rating of each wine based on wine scale traits), Wine_card (model to store the data of each wine) and 3 consatants: CONTINENTS, GRAPES (most popular grapes), TYPES_OF_WINE (red, dry, ets).
 
 ### index.html
 There is three main sections in the body of the page:
-- navbar: the logo of the site and the menu bottom 
-- single wine block: a block which gets wisible only to show a single wine content on the page
-- content block: contains the form to select region of the wine, the wine cards tiles, the pagination block and a footer
+- navbar section: the logo of the site and the menu bottom 
+- single wine section: a section which gets wisible only to show a single wine content on the page
+- content section: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
 
-### wine_block.js 
-After the DOM content of the page has been loaded, event listeners got attached to the `select country` and `select continent` forms, to the menu items and to each of the wine cards.
+### wine_blog.js 
+After the DOM content of the page has been loaded, event listeners got attached to the select forms (region), to the menu items and to each of the wine cards.
 
 When the menu item is clicked, for example, a GET request has been send to `/types` route with the query string of choosen item as a parametr, which will render the `index.html` with the wine cards of a particular wine type. 
 
-When the wine card is clicked, we use the `fetch` function to get a response with all info of the choosen wine. Then we call the `show_wine` function, passing the response from fetch function as a parametr. The `show_wine` function first hides the `content block` with all cards and shows the `single_wine` block. After that, the function takes all of the tags for a single wine and sets their value to the empty string to clear them out. Then, populates the tegs with current wines data, shows header image based on the type of the wine, creates a media tag, video tag, creates divs with ratings icons, and make a call to the `get_associated_wines` function. Which will use the `fetch` function to get all the wines based on the country of the current wine by current country id and current wine id (to exclude it from the result). Then it will call `render_associated_cards` function. 
+When the wine card is clicked, we use the `fetch` function to get a response with all info of the choosen wine. Then we call the `show_wine` function, passing the response from fetch function as a parametr. The `show_wine` function first hides the content section with all cards and shows the `single_wine` section. After that, the function takes all of the tags for a single wine and sets their value to the empty string to clear them out. Then, populates the tegs with current wines data, shows header image based on the type of the wine, creates a media tag, a video tag, creates the divs with the ratings icons, and make a call to the `get_associated_wines` function to find all the associated wines. Which will use the `fetch` function to get all the wines from the database, filtered by the country of the current wine. Then it will call `render_associated_cards` function. 
 The arguments to the `render_associated_cards` function is the responce from the fetch function (wine cards) and the country name. It will create a carousel container at the buttom of the page with the associated wine cards. If the amount of the associated cards is higher then 3 items, it will create an animated chevron-down icon to hide them away. Clicking on the chevron will expand the container to show all the available cards and the chevron-down icon will be replased with chevron-up icon, which when cliked, will collapse the container back to 3 items (to prewious appearence, view??). Click on the wine from the carousel will open a single wine page for the choosen wine.
 
 ### style.css 
