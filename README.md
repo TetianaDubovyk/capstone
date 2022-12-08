@@ -35,22 +35,22 @@ Click on a wine card opens the page (with JavaScript used to control the user in
 ## What’s contained in each file
  ### views.py
  In the views.py written functions which is used in JavaScript code
- - index function: renders the wine_blog/index.html with all available wine cards, ordered by price
- - continents function: get selected continent from the form, filter available countries of the continent and renders the index.html with those countries and their corresponding wine cards
- - countries function: get selected country, renders the index page; continent field gets automatically changed to corresponding continent, based on the chosen country
- - types function: renders the index.html with wine cards of a particular wine type which was chosen by the user from the menu items; if user choose a "random wine" item, it will render only one random wine card; message "no wines found" returns if there are no wines of chosen type
- - single_wine_content function: return JSON data from the server (in the body of an HTTP response) with the data from the all fields from 2 database tables (ratings and description) of a chosen wine; 
- - associated_wines function: gets the id of a current wine (to exclude it from the result) and a country of the current wine, and returns the JSON data with associated wines, filtered by country
- - get_countries_names function: helper function to get all currently available countries from a database (by their ids)
+ - **index function**: renders the wine_blog/index.html with all available wine cards, ordered by price
+ - **continents function**: get selected continent from the form, filter available countries of the continent and renders the index.html with those countries and their corresponding wine cards
+ - **countries function**: get selected country, renders the index page; continent field gets automatically changed to corresponding continent, based on the chosen country
+ - **types function**: renders the index.html with wine cards of a particular wine type which was chosen by the user from the menu items; if user choose a "random wine" item, it will render only one random wine card; message "no wines found" returns if there are no wines of chosen type
+ - **single_wine_content function**: return JSON data from the server (in the body of an HTTP response) with the data from the all fields from 2 database tables (ratings and description) of a chosen wine; 
+ - **associated_wines function**: gets the id of a current wine (to exclude it from the result) and a country of the current wine, and returns the JSON data with associated wines, filtered by country
+ - **get_countries_names function**: helper function to get all currently available countries from a database (by their ids)
 
 ### models.py
 The models.py file consists of 3 models: Regions_and_flags (model for countries), Personal_rating (model to store a rating of each wine based on wine scale traits), Wine_card (model to store the data of each wine) and 3 constants: CONTINENTS, GRAPES (most popular grapes), TYPES_OF_WINE (red, dry, ets).
 
 ### index.html
 There are three main sections in the body of the page:
-- navbar section: the logo of the site and the menu bottom 
-- single wine section: a section which gets visible only to show a single wine content on the page
-- content section: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
+- **navbar section**: the logo of the site and the menu bottom 
+- **single wine section**: a section which gets visible only to show a single wine content on the page
+- **content section**: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
 
 ### wine_blog.js 
 After the DOM content of the page has been loaded, event listeners got attached to the select forms (region), to the menu items and to each of the wine cards.
