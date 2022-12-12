@@ -81,7 +81,7 @@ Then it will call `render_associated_cards` function.
 The arguments to the `render_associated_cards` function is the response from the fetch function (wine cards) and the country name. 
 It will create a carousel container at the bottom of the page with the associated wine cards. 
 If the amount of the associated cards is higher then 3 items, it will create an animated chevron-down icon to hide them away. 
-Clicking on the chevron will expand the container to show all the available cards and the chevron-down icon will be replased with chevron-up icon, 
+Clicking on the chevron will expand the container to show all the available cards and the chevron-down icon will be replaced with chevron-up icon, 
 which when clicked, will collapse the container back to 3 items (to previous appearance, view??). 
 Click on the wine from the carousel will open a single wine page for the chosen  wine.
 
@@ -142,4 +142,4 @@ The **tqdm** package needs to be installed:
 ```
 pip install -r requirements.txt
 ```
-The package is used to show the progress bar of the process of inserting the data into a databse, after running the `fill_in_database` command.
+The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
