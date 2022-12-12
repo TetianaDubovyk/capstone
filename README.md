@@ -3,7 +3,7 @@ It is a single page application, which one can use as a template for a blog abou
 #### Video Demo:  <https://youtu.be/MQu1b46aGVE>
 ## Table of Contents
 * [Distinctiveness and Complexity](#distinctiveness-and-complexity)
-* [Short describing](#short-describing-of-the-project)
+* [Short describing of the project](#short-describing-of-the-project)
 * [What is contained in each file](#what-is-contained-in-each-file)
 * [How to run the application](#how-to-run-the-application)
 * [Additional information](#additional-information)
@@ -127,3 +127,5 @@ The **tqdm** package needs to be installed:
 pip install -r requirements.txt
 ```
 The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
+
+All the media files for the wine cards belongs to me personally.
