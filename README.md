@@ -107,47 +107,25 @@ It takes approximately 30sec to fill in the database, during which user can see 
 
 ## How to run the application
 To run the application for a first time, execute:
-```
-python manage.py makemigrations wine_blog
-``` 
+```python manage.py makemigrations wine_blog``` 
 
 Then apply migrations to the database:
-```
-python manage.py migrate
-```
+```python manage.py migrate```
 
 To populate the site with some of the samples data, execute: 
-```
-python manage.py fill_in_database
-```
+```python manage.py fill_in_database```
 
 To start the server, run:
-```
-python manage.py runserver
-```
+```python manage.py runserver```
 
 To add new data to the site, use Django default admin interface. So, first create an admin user:
-```
-python manage.py createsuperuser
-```
+```python manage.py createsuperuser```
 Enter a username, an email and a password. Then run:
-```
-python manage.py runserver
-```
-<<<<<<< HEAD
-Go to the local_domain/admin/, log in with the superuser account which was created in the previous step.
-=======
+```python manage.py runserver```
 Go to the local_domain/admin/, log in with the super user account which was created in the previous step.
->>>>>>> b52869fdb6a3b57e5672d527d32e7ec4cbd5f143
 After loggin in, a site administrator can create, edit, and delete objects stored in the database.
 
 ## Additional information
 The **tqdm** package needs to be installed:
-```
-pip install -r requirements.txt
-```
-<<<<<<< HEAD
+```pip install -r requirements.txt```
 The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
-=======
-The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
->>>>>>> b52869fdb6a3b57e5672d527d32e7ec4cbd5f143
