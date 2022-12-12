@@ -30,7 +30,8 @@ a picture of the wine bottle, a representing video, a short personal comment, ow
 If there are more wines of this region in the database, associated wines will appear in the corresponding block. 
 If there are more than 3 of them, they will be hidden away with an animated chevron.
 
-## What’s contained in each file
+## What is contained in each file
+ Files:
  ### views.py
  - **index function**: renders the wine_blog/index.html with all available wine cards, ordered by price
  - *continents function*: gets the selected continent from the form, filters available countries of the continent and renders the index.html with those countries and their corresponding wine cards
