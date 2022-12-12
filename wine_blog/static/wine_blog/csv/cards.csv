@@ -2,7 +2,7 @@ id,grapes_list,winery_name,special_grapes,type,price,year,description,image_url,
 1,Riesling,Henry Weber,,White Dry,10,2019,Just a good Riesling!,\static\wine_blog\media\for_cards\riesling_img.jpg,2022-11-18,Europe,60,1,\static\wine_blog\media\for_cards\riesling.mp4
 2,,Sensi,Sangiovese,Red Dry,9,2018,Great Sangiovese! Sangiovese is always a good choice.,\static\wine_blog\media\for_cards\sangiovese_toscana_img.jpg,2022-11-18,Europe,82,2,\static\wine_blog\media\for_cards\sangiovese.mp4
 3,Malbec,Callia,,Red Dry,7,2020,A great full-body Malbec!,\static\wine_blog\media\for_cards\callia_img.png,2022-11-18,South America,8,3,\static\wine_blog\media\for_cards\callia_malbec.mp4
-4,,Jean de la Roche,Sauvignon,Red Dry,6,2020,"Great Sauvignon! Blanc is redundant, just Sauvignon is the best!",\static\wine_blog\media\for_cards\sauvignon_img.jpg,2022-11-18,Europe,60,4,\static\wine_blog\media\for_cards\sauvignon.mp4
+4,,Jean de la Roche,Sauvignon,White Dry,6,2020,"Great Sauvignon! Blanc is redundant, just Sauvignon is the best!",\static\wine_blog\media\for_cards\sauvignon_img.jpg,2022-11-18,Europe,60,4,\static\wine_blog\media\for_cards\sauvignon.mp4
 5,,Il Proprio,Sangiovese,Red Dry,9,2016,Feels like Cabernet Sauvignon...,\static\wine_blog\media\for_cards\sangiovese_img.jpg,2022-11-18,Europe,82,5,\static\wine_blog\media\for_cards\sangiovese_toscana.mp4
 6,Sauvignon Blanc,Marlborough Sun,,White Dry,12,2020,The pure Marlborough Sun Sauvignon Blanc,\static\wine_blog\media\for_cards\marlboro.jpg,2022-11-18,Oceania,120,6,\static\wine_blog\media\for_cards\marlboro.mp4
 7,,Plantaze,Krstac,White Dry,8,2019,Worth trying!,\static\wine_blog\media\for_cards\krstac_img.png,2022-11-18,Europe,112,7,\static\wine_blog\media\for_cards\krstac.mp4
