@@ -134,7 +134,11 @@ Enter a username, an email and a password. Then run:
 ```
 python manage.py runserver
 ```
+<<<<<<< HEAD
 Go to the local_domain/admin/, log in with the superuser account which was created in the previous step.
+=======
+Go to the local_domain/admin/, log in with the super user account which was created in the previous step.
+>>>>>>> b52869fdb6a3b57e5672d527d32e7ec4cbd5f143
 After loggin in, a site administrator can create, edit, and delete objects stored in the database.
 
 ## Additional information
@@ -142,4 +146,8 @@ The **tqdm** package needs to be installed:
 ```
 pip install -r requirements.txt
 ```
+<<<<<<< HEAD
 The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
+=======
+The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
+>>>>>>> b52869fdb6a3b57e5672d527d32e7ec4cbd5f143
