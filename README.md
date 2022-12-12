@@ -40,14 +40,14 @@ If there are more than 3 of them, they will be hidden away with an animated chev
 
 ## What’s contained in each file
  ### views.py
- - index function: renders the wine_blog/index.html with all available wine cards, ordered by price
- - continents function: gets the selected continent from the form, filters available countries of the continent and renders the index.html with those countries and their corresponding wine cards
- - countries function: gets the selected country, renders the index page; continent field gets automatically changed to corresponding continent, based on the chosen country
- - types function: renders the index.html with wine cards of a particular wine type which was chosen by the user from the menu items; if user choose a "random wine" item,
+ - **index function**: renders the wine_blog/index.html with all available wine cards, ordered by price
+ - *continents function*: gets the selected continent from the form, filters available countries of the continent and renders the index.html with those countries and their corresponding wine cards
+ - **countries function**: gets the selected country, renders the index page; continent field gets automatically changed to corresponding continent, based on the chosen country
+ - **types function**: renders the index.html with wine cards of a particular wine type which was chosen by the user from the menu items; if user choose a "random wine" item,
 it will render only one random wine card; message "no wines found" returns if there are no wines of chosen type
- - single_wine_content function: returns JSON data from the server (in the body of an HTTP response) with the data from the all fields from 2 database tables (ratings and description) of a chosen wine; 
- - associated_wines function: gets the id of the current wine (to exclude it from the result) and a country of the current wine, and returns the JSON data with associated wines, filtered by country
- - get_countries_names function: helper function to get all currently available countries from a database (by their ids)
+ - **single_wine_content function**: returns JSON data from the server (in the body of an HTTP response) with the data from the all fields from 2 database tables (ratings and description) of a chosen wine; 
+ - **associated_wines function**: gets the id of the current wine (to exclude it from the result) and a country of the current wine, and returns the JSON data with associated wines, filtered by country
+ - **get_countries_names function**: helper function to get all currently available countries from a database (by their ids)
 
 ### models.py
 The models.py file consists of 3 models: 
@@ -58,9 +58,9 @@ and 3 constants: CONTINENTS, GRAPES (most popular grapes), TYPES_OF_WINE (red, d
 
 ### index.html
 There are three main sections in the body of the page:
-- navbar section: the logo of the site and the menu 
-- single wine section: a section which gets visible only to show a single wine content on the page
-- content section: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
+- **navbar section**: the logo of the site and the menu 
+- **single wine section**: a section which gets visible only to show a single wine content on the page
+- **content section**: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
 
 ### wine_blog.js 
 After the DOM content of the page has been loaded, event listeners got attached to the select forms, to the menu items and to each of the wine cards.
