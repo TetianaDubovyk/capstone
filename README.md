@@ -16,12 +16,12 @@ It is a single page application, which one can use as a template for a blog abou
 * [How to run the application](#how-to-run)
 * [Additional information](#additional-information)
 
-## Distinctiveness and Complexity {#distinctiveness-and-complexity}
+## Distinctiveness and Complexity
 My project is distinct from the other ones in this course because it covers the topic of a blog site (or a news site in a way), 
 which is owned by an individual and *the information is the focus*, not the communication with the viewer. 
 Also it has objects for user to interact with, such as an animated menu bar, a filter form at the main page and the chevrons on the single wine page. 
 
-## Short describing of the project {#short-describing-of-the-project}
+## Short describing of the project
 The wine blog is an online journal (a diary website) that offers regularly updated content about wine. 
 It presents information in reverse chronological order and it is written in an informal style.
 
