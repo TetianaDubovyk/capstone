@@ -5,14 +5,6 @@ It is a single page application, which one can use as a template for a blog abou
 * [Distinctiveness and Complexity](#distinctiveness-and-complexity)
 * [Short describing](#short-describing-of-the-project)
 * [What’s contained in each file](#what’s-contained-in-each-file)
-    * views.py
-    * models.py
-    * index.html
-    * wine_blog.js
-    * style.css
-    * CSV folder
-    * Media folder
-    * fill_in_database.py
 * [How to run the application](#how-to-run-the-application)
 * [Additional information](#additional-information)
 
