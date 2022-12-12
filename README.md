@@ -4,7 +4,7 @@ It is a single page application, which one can use as a template for a blog abou
 ## Table of Contents
 * [Distinctiveness and Complexity](#distinctiveness-and-complexity)
 * [Short describing](#short-describing-of-the-project)
-* [What’s contained in each file](#what’s-contained-in-each-file)
+* [What is contained in each file](#what-is-contained-in-each-file)
 * [How to run the application](#how-to-run-the-application)
 * [Additional information](#additional-information)
 
