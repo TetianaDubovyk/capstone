@@ -4,16 +4,16 @@ It is a single page application, which one can use as a template for a blog abou
 ## Table of Contents
 * [Distinctiveness and Complexity](#distinctiveness-and-complexity)
 * [Short describing](#short-describing-of-the-project)
-* [What’s contained in each file](#in-each-file)
-    * [views.py](#views)
-    * [models.py](#models)
-    * [index.html](#index)
-    * [wine_blog.js](#wine_blog)
-    * [style.css](#style)
-    * [CSV folder](#csv)
-    * [Media folder](#media)
-    * [fill_in_database.py](#fill_in_database)
-* [How to run the application](#how-to-run)
+* [What’s contained in each file](#what’s-contained-in-each-file)
+    * [views.py](#views.py)
+    * [models.py](#models.py)
+    * [index.html](#index.html)
+    * [wine_blog.js](#wine_blog.js)
+    * [style.css](#style.css)
+    * [CSV folder](#csv-files)
+    * [Media folder](#media-folder)
+    * [fill_in_database.py](#fill_in_database.py)
+* [How to run the application](#how-to-run-the-application)
 * [Additional information](#additional-information)
 
 ## Distinctiveness and Complexity
@@ -38,8 +38,8 @@ a picture of the wine bottle, a representing video, a short personal comment, ow
 If there are more wines of this region in the database, associated wines will appear in the corresponding block. 
 If there are more than 3 of them, they will be hidden away with an animated chevron.
 
-## What’s contained in each file {#in-each-file}
- ### views.py {#views}
+## What’s contained in each file
+ ### views.py
  - **index function**: renders the wine_blog/index.html with all available wine cards, ordered by price
  - *continents function*: gets the selected continent from the form, filters available countries of the continent and renders the index.html with those countries and their corresponding wine cards
  - **countries function**: gets the selected country, renders the index page; continent field gets automatically changed to corresponding continent, based on the chosen country
@@ -49,20 +49,20 @@ it will render only one random wine card; message "no wines found" returns if th
  - **associated_wines function**: gets the id of the current wine (to exclude it from the result) and a country of the current wine, and returns the JSON data with associated wines, filtered by country
  - **get_countries_names function**: helper function to get all currently available countries from a database (by their ids)
 
-### models.py {#models}
+### models.py
 The models.py file consists of 3 models: 
 Regions_and_flags (model for countries), 
 Personal_rating (model to store a rating of each wine based on wine scale traits), 
 Wine_card (model to store the data of each wine) 
 and 3 constants: CONTINENTS, GRAPES (most popular grapes), TYPES_OF_WINE (red, dry, etc.).
 
-### index.html {#index}
+### index.html
 There are three main sections in the body of the page:
 - **navbar section**: the logo of the site and the menu 
 - **single wine section**: a section which gets visible only to show a single wine content on the page
 - **content section**: contains the form to select region of the wine, the wine cards tiles, the pagination section and a footer
 
-### wine_blog.js {#wine_blog}
+### wine_blog.js
 After the DOM content of the page has been loaded, event listeners got attached to the select forms, to the menu items and to each of the wine cards.
 
 When the menu item is clicked, for example, a GET request has been send to `/types` route with the query string of chosen item as a parameter, 
@@ -82,26 +82,26 @@ Clicking on the chevron will expand the container to show all the available card
 which when clicked, will collapse the container back to 3 items. 
 Click on the wine from the carousel will open a single wine page for the chosen wine.
 
-### style.css {#style}
+### style.css
 Contains design for the site.
 
-### Media folder {#media}
+### Media folder
 Contains all the images for the site
 
-### CSV folder {#csv}
+### CSV folder
 The folder contains three csv files: cards.csv, ratings.csv and regions_and_flags.csv. 
 Cards.csv contains pre-written data for the Wine_card model.
 Ratings.csv contains corresponding ratings to wines from cards.csv for the Ratings model.
 Regions_and_flags contain all the countries in the world with their flag codes.
 
-### fill_in_database.py {#fill_in_database}
+### fill_in_database.py
 In the file has been implemented the custom django-admin command to add an additional manage.py action to the application. 
 The command is intended to populate the application database with the pre-written data, to display purposes.
 The `handle` method runs the functions (`open_regions`, `open_ratings`, `open_cards`) to open the csv files and insert the data from them into the Django database tables. 
 Each function is called with the parameter - the path of the corresponding csv file.
 It takes approximately 30sec to fill in the database, during which user can see the progress bar of the process.
 
-## How to run the application {#how-to-run}
+## How to run the application
 To run the application for a first time, execute:
 ```
 python manage.py makemigrations wine_blog
@@ -129,7 +129,7 @@ python manage.py runserver
 Go to the local_domain/admin/, log in with the superuser account which was created in the previous step.
 After logging in, a site administrator can create, edit, and delete objects stored in the database.
 
-## Additional information {#additional-information}
+## Additional information
 The **tqdm** package needs to be installed:
 ```
 pip install -r requirements.txt
