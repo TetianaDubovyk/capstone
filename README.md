@@ -128,4 +128,4 @@ pip install -r requirements.txt
 ```
 The package is used to show the progress bar of the process of inserting the data into a database, after running the `fill_in_database` command.
 
-All the media files for the wine cards belongs to me personally.
+**All the media files for the wine cards belongs to the author.**
